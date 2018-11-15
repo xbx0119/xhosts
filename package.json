@@ -1,0 +1,69 @@
+{
+  "name": "xhosts",
+  "version": "0.0.1",
+  "author": "huangyifan",
+  "email" : "huangyifan0119@163.com",
+  "author": {
+    "name": "huangyifan",
+    "email": "huangyifan0119@163.com"
+  },
+  "homepage": "http://localhost",
+  "description": "xhosts: change your hosts quickly",
+  "main": "src/index.js",
+  "build": {
+    "appId": "xhosts",
+    "productName": "xhosts",
+    "directories": {
+      "output": "dist"
+    },
+    "fileAssociations": {
+      "ext": "png",
+      "icon": "src/icons/256x256.png"
+    },
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "icon": "src/icons/256x256.png"
+    },
+    "win": {
+      "target": [
+        "msi",
+        "zip"
+      ],
+      "icon": "src/icons/256x256.png"
+    },
+    "linux": {
+      "target": [
+        "deb",
+        "AppImage"
+      ],
+      "icon": "src/icons/256x256.png",
+      "category": "Graphics",
+      "executableName": "xhosts",
+      "desktop": {
+        "Type": "Application",
+        "Encoding": "UTF-8",
+        "Name": "xhosts",
+        "Name[zh_CN]": "xhosts",
+        "Comment": "change your hosts quickly",
+        "Icon": "src/icons/256x256.png",
+        "Terminal": "false"
+      }
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "build:win": "electron-builder --win",
+    "build:mac": "electron-builder --max",
+    "build:linux": "electron-builder --linux",
+    "build": "npm run build:win && npm run build:mac && npm run build:linux"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "electron-builder": "^20.34.0",
+    "electron": "^3.0.9"
+  }
+}
