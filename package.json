@@ -1,12 +1,11 @@
 {
   "name": "xhosts",
   "version": "0.0.1",
-  "author": "huangyifan",
-  "email" : "huangyifan0119@163.com",
   "author": {
     "name": "huangyifan",
     "email": "huangyifan0119@163.com"
   },
+  "email": "huangyifan0119@163.com",
   "homepage": "http://localhost",
   "description": "xhosts: change your hosts quickly",
   "main": "src/index.js",
@@ -63,7 +62,7 @@
   },
   "license": "ISC",
   "devDependencies": {
-    "electron-builder": "^20.34.0",
-    "electron": "^3.0.9"
+    "electron": "^3.0.9",
+    "electron-builder": "^20.34.0"
   }
 }
