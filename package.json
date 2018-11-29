@@ -8,7 +8,7 @@
   "email": "huangyifan0119@163.com",
   "homepage": "http://localhost",
   "description": "xhosts: change your hosts quickly",
-  "main": "src/index.js",
+  "main": "src/xhosts.js",
   "build": {
     "appId": "xhosts",
     "productName": "xhosts",
@@ -63,6 +63,7 @@
   "license": "ISC",
   "devDependencies": {
     "electron": "^3.0.9",
-    "electron-builder": "^20.34.0"
+    "electron-builder": "^20.34.0",
+    "sudo-prompt": "^8.2.3"
   }
 }

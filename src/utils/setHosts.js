@@ -6,7 +6,7 @@ const fs = require('fs');
 const getHosts = require('./getHosts');
 const getHostsPath = require('./getHostsPath');
 const notice = require('./notice');
-
+const sudoEdit = require('./sudoEdit');
 
 
 module.exports = function setHosts(domain, ip) {
@@ -32,14 +32,10 @@ module.exports = function setHosts(domain, ip) {
 
 	let data = list.join('\n');
 
-	fs.writeFile(hostsPath, data, {
-		flag: 'w'
+	sudoEdit(hostsPath, data, () => {
+		notice(ip + '   ' + domain);
 	}, (err) => {
-		if (err) {
-			console.log(err.toString());
-			notice(err.toString());
-		} else {
-			notice(ip + '   ' + domain);
-		}
+		console.log(err.toString());
+		notice(err.toString());
 	});
 }
