@@ -63,7 +63,9 @@
   "license": "ISC",
   "devDependencies": {
     "electron": "^3.0.9",
-    "electron-builder": "^20.34.0",
+    "electron-builder": "^20.34.0"
+  },
+  "dependencies": {
     "sudo-prompt": "^8.2.3"
   }
 }
